@@ -1,0 +1,85 @@
+<!--<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>文件</title>
+		<script>
+			window.onload=function(){
+				var file=document.getElementById("file");
+				var bu=document.getElementById("bu");
+				var s1=document.getElementById("s1");
+				var s2=document.getElementById("s2");
+//				bu.onclick=function(){
+//					for(var i=0;i<file.files.length;i++){
+//						console.log(file.files[i].name);
+//					}
+//				}
+				bu.onclick=function(){
+					if(file.files[0]==undefined||!/image\/\w+/.test(file.files[0].type)){
+						console.log("请上传一张图片")
+					}
+					else{
+						s1.innerHTML+=file.files[0].size;
+						s2.innerHTML+=file.files[0].type;
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		选择文件
+		<input type="file" id="file" multiple />
+		<input type="button" id="bu" value="显示文件信息"/><br />
+		<span id="s1">文件字节长度：</span><br />
+		<span id="s2">文件类型：</span>
+	</body>
+</html>-->
+<html>
+	<head>
+		<title>文件</title>
+		<meta charset="utf-8" >
+		<script>
+			window.onload=function(){
+				if(!window.FileReader){
+					alert("浏览器不支持FileRader");
+				}else{
+					var file=document.getElementById("file");
+					var b1=document.getElementById("b1");
+					var b1=document.getElementById("b1");
+					var b1=document.getElementById("b1");
+					var result=document.getElementById("result");
+					var reader=new FileReader();
+					b1.onclick=function(){
+						if(file.files[0]==undefined||!/image\/\w+/.test(file.files[0].type)){
+							console.log("请上传一张图片");
+						}else{
+							reader.readAsDataURL(file.files[0]);
+							reader.onload=function(){
+								result.innerHTML="<img src='"+reader.result+"'/>";
+							}
+						}
+					}
+					b2.onclick=function(){
+						reader.readAsBinaryString(file.files[0]);
+						reader.onload=function(){
+							result.innerHTML=this.result;
+						}
+					}
+					b3.onclick=function(){
+						reader.readAsText(file.files[0]);
+						reader.onload=function(){
+							result.innerHTML=this.result;
+						}
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		请选择一个文件：<input type="file" id="file" multiple /><br />
+		<button id="b1">读取图像</button>
+		<button id="b2">读取二进制数据</button>
+		<button id="b3">读取文本文件</button>
+		<div id="result"></div>
+	</body>
+</html>

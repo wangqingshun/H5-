@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ToDoList</title>
+		<style>
+			*{
+				margin:0px;
+				padding:0px;
+			}
+			li{
+				list-style-type: none;
+			}
+			#h1{
+				width:1365px;
+				height:50px;
+				line-height: 50px;
+				background-color:#323232 ;
+			}
+			#h1 p{
+				margin-left:380px;
+				color:white;
+				float:left;
+				font-family: "宋体";
+				font-size: 25px;
+			}
+			#h2{
+				margin-left: 140px;
+				margin-top:12.5px;
+				width:365px;
+				height:25px;
+				float:left;
+			}
+			#a1{
+				width:1360px;
+				height:600px;
+				background-color:#cdcdcd;
+			}
+			#a2{
+				margin-left:380px;
+				width:600px;
+			}
+			#a3{
+				margin-left:380px;
+				margin-top: 35px;
+				width:600px;
+			}
+			/*#u1 li{
+				height:30px;
+				background-color: white;
+				color: black;
+				margin-left: 15px;
+			}*/
+			/*#ul p{
+				margin-left: 15px;
+				float:left
+			}
+			#u1{
+				margin-top: 20px;
+			}
+			#ul button{
+				float:left;
+			}*/
+		</style>
+		<script>
+			window.onload=function(){
+				var str="";
+				var h2=document.getElementById("h2");
+				var u1=document.getElementById("u1");
+				var u2=document.getElementById("u2");
+				h2.onkeydown=function(e){
+					if(e.keyCode==13){
+						str=h2.value;
+						var li=document.createElement("li");
+						li.innerHTML="<input type="+"checkbox"+" class="+'c1'+"/>"+str+"<button>删除<button>";
+						//var ad="'<input type="+"checkbox"+" class="+'c1'+"/>'"+str+"<button>删除<button>"
+						u1.appendChild(li);
+					}
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<header id="h1">
+			<p>ToDoList</p>
+			<input type="text" id="h2" placeholder="添加ToDo"/>
+		</header>
+		<article id="a1">
+			<div id="a2">
+				<h2>正在进行</h2>
+				<ul id="u1"></ul>
+			</div>
+			<div id="a3">
+				<h2>已经完成</h2>
+				<ul id="u2"></ul>
+			</div>
+		</article>
+	</body>
+</html>
