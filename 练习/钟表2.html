@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<canvas id="can1" width="510" height="510">
+			<script>
+				var canvas=document.getElementById("can1");
+				var context=canvas.getContext("2d");
+				function draw(){//定义划时钟的方法
+ 				var data = new Date();
+ 				var hHoure = data.getHours();
+ 				var mMin = data.getMinutes();
+ 				var sSec = data.getSeconds();
+ 				var hValue = (hHoure*30+mMin/2-90)*Math.PI/180; 
+ 				var mValue = (mMin*6-90)*Math.PI/180;
+ var sValue = (sSec*6 -90)*Math.PI/180;
+ var x = 200,y = 200,r = 150;
+  
+ context.clearRect(0,0,canvas.width,canvas.height);
+ context.moveTo(x,y);
+ context.arc(x,y,r,0,6*Math.PI/180,false);
+ //
+ context.beginPath();
+ context.lineWidth = 1;
+ for(var i = 0;i<60;i++){
+ context.moveTo(x,y);
+ context.arc(x,y,r,6*i*Math.PI/180,6*(i+1)*Math.PI/180,false);
+ }
+ context.closePath();
+ context.stroke();
+ //
+ context.beginPath();
+ context.fillStyle = "white";
+ context.moveTo(x,y);
+ context.arc(x,y,r/1.1,-0,2*Math.PI,false);
+ context.closePath();
+ context.fill();
+ // 
+ context.beginPath();
+ context.lineWidth = 3;
+ for(var i = 0;i<12;i++){
+ context.moveTo(x,y);
+ context.arc(x,y,r,30*i*Math.PI/180,30*(i+1)*Math.PI,false);
+ }
+ context.closePath();
+ context.stroke();
+ //
+   context.beginPath();
+   context.fillStyle = "white";
+   context.moveTo(x,y);
+   context.arc(x,y,r/1.12,0,2*Math.PI,false);
+   context.closePath();
+   context.fill();
+  
+ context.beginPath();
+ context.fillStyle = "black";
+ context.moveTo(x,y);
+ context.arc(x,y,r/30,0,2*Math.PI,false);
+ context.fill(); 
+ //
+ context.beginPath();
+ context.lineWidth = 5;
+ context.moveTo(x,y);
+ context.arc(x,y,r/2.5,hValue,hValue,false);
+ context.stroke();
+ //
+ context.beginPath();
+ context.lineWidth = 3;
+ context.moveTo(x,y);
+ context.arc(x,y,r/2,mValue,mValue,false);
+ context.stroke(); 
+ //
+ context.beginPath();
+ context.lineWidth = 2;
+ context.moveTo(x,y);
+ context.arc(x,y,r/1.6,sValue,sValue,false);
+ context.stroke();
+}
+				window.onload = function(){
+ 
+ canvas.height = 500;
+ canvas.width = 500;
+ setInterval(draw,1000); 
+ draw();
+ }
+			</script>
+		</canvas>
+	</body>
+
+</html>

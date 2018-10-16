@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>画布</title>
+		<style>
+			canvas{
+				margin:0 auto;
+				border:1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<!--<canvas id="cav1" width="1000" height="500">
+			<script>
+				var canvas=document.getElementById("cav1");
+				var context=canvas.getContext("2d");
+				context.moveTo(10,10);
+				context.lineTo(10,110);
+				context.lineTo(110,110);
+				context.lineTo(10,10);
+				context.lineWidth=2;
+				context.strokeStyle="red";
+				context.fillStyle="aqua"
+				context.fill();
+				context.stroke();
+				context.beginPath();
+				context.moveTo(50,10);
+				context.lineTo(150,110);
+				context.strokeStyle="black";
+				context.stroke();
+				context.closePath();
+				for(i=0;i<10;i++){
+					context.beginPath();
+					context.arc(50+100*i,200,50,0,2*Math.PI*(i+1)/10,false);
+					context.closePath();
+					context.stroke();
+				}
+				context.beginPath();
+				context.arc(300,300,50,1.5*Math.PI,0.5*Math.PI,false)
+				context.fillStyle="white";
+				context.fill();
+				context.closePath();
+				
+				
+				context.beginPath();
+				context.arc(300,300,50,0.5*Math.PI,1.5*Math.PI,false)
+				context.fillStyle="black";
+				context.fill();
+				context.closePath();
+				
+				context.beginPath();
+				context.arc(300,275,25,0,2*Math.PI,false)
+				context.fillStyle="white";
+				context.fill();
+				context.closePath();
+				
+				
+				context.beginPath();
+				context.arc(300,325,25,0,2*Math.PI,false)
+				context.fillStyle="black";
+				context.fill();
+				context.closePath();
+				
+				context.beginPath();
+				context.arc(300,275,5,0,2*Math.PI,false)
+				context.fillStyle="black";
+				context.fill();
+				context.closePath();
+				
+				context.beginPath();
+				context.arc(300,325,5,0,2*Math.PI,false)
+				context.fillStyle="white";
+				context.fill();
+				context.closePath();
+			</script>
+		</canvas>-->
+		<canvas id ="cav2" width="520" height="520">
+			<script>
+				var canvas=document.getElementById("cav2");
+				var context=canvas.getContext("2d");
+				context.beginPath();
+				context.moveTo(0,0);
+				context.lineTo(260,260);
+				context.lineTo(0,520);
+				context.fillStyle="#67becf";
+				context.fill();	
+				//context.stroke();
+				context.closePath();
+				
+				
+				context.beginPath();
+				context.moveTo(0,0);
+				context.lineTo(260,260);
+				context.lineTo(520,0);
+				context.lineTo(0,0);
+				context.fillStyle="#caff67";	
+				context.fill();	
+				//context.stroke();
+				context.closePath();
+				
+				context.beginPath();
+				context.moveTo(520,520);
+				context.lineTo(520,260);
+				context.lineTo(260,520);
+				context.fillStyle="#f6ca29";	
+				context.fill();	
+				//context.stroke();
+				context.closePath();
+				
+				context.beginPath();
+				context.moveTo(0,520);
+				context.lineTo(130,390);
+				context.lineTo(260,520);
+				context.fillStyle="#fa8ecc";	
+				context.fill();	
+				//context.stroke();
+				context.closePath();
+				
+				context.beginPath();
+				context.moveTo(260,520);
+				context.lineTo(390,390);
+				context.lineTo(260,260);
+				context.lineTo(130,390);
+				context.fillStyle="#a594c0";	
+				context.fill();	
+				//context.stroke();
+				context.closePath();
+				
+				
+				context.beginPath();
+				context.moveTo(390,390);
+				context.lineTo(260,260);
+				context.lineTo(390,130);
+				context.fillStyle="#f9f51a";	
+				context.fill();	
+				//context.stroke();
+				context.closePath();
+				
+				
+				context.beginPath();
+				context.moveTo(520,0);
+				context.lineTo(520,260);
+				context.lineTo(390,390);
+				context.lineTo(390,130);
+				context.fillStyle="#ef3d61";	
+				context.fill();	
+				//context.stroke();
+				context.closePath();
+			</script>
+		</canvas>
+	</body>
+</html>

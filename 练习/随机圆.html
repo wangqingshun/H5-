@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			canvas{
+				border: 1px solid red;
+				display: block;
+				margin:50px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="can4" width="600" height="600">
+			<script>
+				window.onload=function(){
+					var canvas=document.getElementById("can4");
+				var context=canvas.getContext("2d");
+				for(var i=0;i<50;i++){
+					context.beginPath();
+					var x=Math.random()*600;
+					var y=Math.random()*600;
+					var r=Math.random()*80;
+					var R=Math.floor(Math.random()*255);
+					var G=Math.floor(Math.random()*255);
+					var B=Math.floor(Math.random()*255);
+					var T=Math.random();
+					context.fillStyle = "rgba(" + R + "," + G + "," + B + "," + T + ")";
+					context.arc(x,y,r,0,2*Math.PI);
+					context.fill();
+					context.closePath();
+				}
+				}
+			</script>
+		</canvas>
+	</body>
+</html>

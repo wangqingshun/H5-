@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			canvas{
+				border:1px solid red;
+				display: block;
+				margin:20 auto;
+				background-color: #000000;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="can5" width="500" height="500">
+			<script>
+				var canvas=document.getElementById("can5");
+				var context=canvas.getContext("2d");
+				function strat(x,y,R,r,a){
+					context.beginPath();
+					context.fillStyle="gold";
+					for(var i=0;i<5;i++){
+						context.lineTo(Math.cos((18+72*i-a)/180*Math.PI)*R+x,
+						-Math.sin((18+72*i-a)/180*Math.PI)*R+y);
+						context.lineTo(Math.cos((54+72*i-a)/180*Math.PI)*r+x,
+						-Math.sin((54+72*i-a)/180*Math.PI)*r+y);	
+					}
+					context.fill();
+					context.closePath();
+				}
+				for(var i=0;i<100;i++){
+					var R=Math.floor(Math.random()*20);
+					var r=Math.floor(R*2/3);
+					var x=Math.floor(Math.random()*500);
+					var y=Math.floor(Math.random()*500);
+					var a=Math.floor(Math.random()*360);
+					strat(x,y,R,r,a);
+				}
+			</script>
+		</canvas>
+	</body>
+</html>
