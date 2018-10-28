@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>H5小游戏</title>
+	</head>
+	<body>
+		<canvas id="canvas" width="800" height="500">你的浏览器不支持canvas</canvas>
+		
+	</body>
+	<script>
+		var canvas=document.getElementById("canvas");
+		var context=canvas.getContext("2d");
+		//创建对象方块
+		function Rect(x,y,w,h,color){
+			this.x=x;
+			this.y=y;
+			this.w=w;
+			this.h=h;
+			this.color=color;
+		}
+		Rect.prototype.draw=function(){
+			context.benginPath();
+			context.fillStyle=this.color;
+			context.rect(this.x,this.y,this.w,this.h);
+			context.fill();
+			context.stroke();
+		}
+		//构造蛇
+		function Snake(){
+			var snakeArray=[];
+			for(var i=0;i<4;i++){
+				var rect=new Rect(i*20,0,20,20,"gray");
+				this.sankeArray.splice(0,0,rect)
+			}
+			//初始方向
+			this.direction=39;
+		}
+		Snake.prototype.draw=function(){
+			for(var i=0;i<this.snakeArray.length;i++){
+				this.snakArray[i].draw();
+			}
+		}
+		Snake.prototype.move=function(){
+			var rect=new Rect(this.head.x,this.head.y,this.)
+		}
+		var snak=new Snak();
+		snak.draw();
+		var food=new getRandomFood()
+		var timer=setInterval(function(){
+			context.clearRect(0,0,canvas.width,canvas.height);
+			food,draw();
+			snak.move();
+			snake.draw();
+		},100)
+		document.onkeydown=function(e){
+			var ev=e||window.event;
+			switch(ev.keyCode){
+				case 37:{
+					if(snake.direction!==39){
+						snake.dirction=37;
+					}
+					break;
+				}
+				case 38:{
+					if(snake.dirction!==40){
+						snake.dirction=38;
+					}
+					break;
+				}
+				case 39:{
+					if(snake.dirction)
+				}
+			}
+		}
+	</script>
+</html>

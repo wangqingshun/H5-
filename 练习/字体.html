@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#div1{
+				margin:10px auto;
+				width:600px;
+				height:450px;
+				border: 1px solid greenyellow;
+				background-color: #eeeeee;
+			}
+			table th,td{
+				text-align: center;
+				color:greenyellow;
+			}
+			td{
+				width:88px;
+				height:33px;
+			}
+			tr:nth-child(4) td:nth-child(2){background-color: hsl(90,100%,100%);}
+			tr:nth-child(4) td:nth-child(3){background-color: hsl(90,75%,100%);}
+			tr:nth-child(4) td:nth-child(4){background-color: hsl(90,50%,100%);}
+			tr:nth-child(4) td:nth-child(5){background-color: hsl(90,25%,100%);}
+			tr:nth-child(4) td:nth-child(6){background-color: hsl(90,0%,100%);}
+			tr:nth-child(5) td:nth-child(2){background-color: hsl(90,100%,88%);}
+			tr:nth-child(5) td:nth-child(3){background-color: hsl(90,75%,88%);}
+			tr:nth-child(5) td:nth-child(4){background-color: hsl(90,50%,88%);}
+			tr:nth-child(5) td:nth-child(5){background-color: hsl(90,25%,88%);}
+			tr:nth-child(5) td:nth-child(6){background-color: hsl(90,0%,88%);}
+			tr:nth-child(6) td:nth-child(2){background-color: hsl(90,100%,75%);}
+			tr:nth-child(6) td:nth-child(3){background-color: hsl(90,75%,75%);}
+			tr:nth-child(6) td:nth-child(4){background-color: hsl(90,50%,75%);}
+			tr:nth-child(6) td:nth-child(5){background-color: hsl(90,25%,75%);}
+			tr:nth-child(6) td:nth-child(6){background-color: hsl(90,0%,75%);}
+			tr:nth-child(7) td:nth-child(2){background-color: hsl(90,100%,63%);}
+			tr:nth-child(7) td:nth-child(3){background-color: hsl(90,75%,63%);}
+			tr:nth-child(7) td:nth-child(4){background-color: hsl(90,50%,63%);}
+			tr:nth-child(7) td:nth-child(5){background-color: hsl(90,25%,63%);}
+			tr:nth-child(7) td:nth-child(6){background-color: hsl(90,0%,63%);}
+			tr:nth-child(8) td:nth-child(2){background-color: hsl(90,100%,50%);}
+			tr:nth-child(8) td:nth-child(3){background-color: hsl(90,75%,50%);}
+			tr:nth-child(8) td:nth-child(4){background-color: hsl(90,50%,50%);}
+			tr:nth-child(8) td:nth-child(5){background-color: hsl(90,25%,50%);}
+			tr:nth-child(8) td:nth-child(6){background-color: hsl(90,0%,50%);}
+			tr:nth-child(9) td:nth-child(2){background-color: hsl(90,100%,38%);}
+			tr:nth-child(9) td:nth-child(3){background-color: hsl(90,75%,38%);}
+			tr:nth-child(9) td:nth-child(4){background-color: hsl(90,50%,38%);}
+			tr:nth-child(9) td:nth-child(5){background-color: hsl(90,25%,38%);}
+			tr:nth-child(9) td:nth-child(6){background-color: hsl(90,0%,38%);}
+			tr:nth-child(10) td:nth-child(2){background-color: hsl(90,100%,25%);}
+			tr:nth-child(10) td:nth-child(3){background-color: hsl(90,75%,25%);}
+			tr:nth-child(10) td:nth-child(4){background-color: hsl(90,50%,25%);}
+			tr:nth-child(10) td:nth-child(5){background-color: hsl(90,25%,25%);}
+			tr:nth-child(10) td:nth-child(6){background-color: hsl(90,0%,25%);}
+			tr:nth-child(11) td:nth-child(2){background-color: hsl(90,100%,13%);}
+			tr:nth-child(11) td:nth-child(3){background-color: hsl(90,75%,13%);}
+			tr:nth-child(11) td:nth-child(4){background-color: hsl(90,50%,13%);}
+			tr:nth-child(11) td:nth-child(5){background-color: hsl(90,25%,13%);}
+			tr:nth-child(11) td:nth-child(6){background-color: hsl(90,0%,13%);}
+			tr:nth-child(12) td:nth-child(2){background-color: hsl(90,100%,0%);}
+			tr:nth-child(12) td:nth-child(3){background-color: hsl(90,75%,0%);}
+			tr:nth-child(12) td:nth-child(4){background-color: hsl(90,50%,0%);}
+			tr:nth-child(12) td:nth-child(5){background-color: hsl(90,25%,0%);}
+			tr:nth-child(12) td:nth-child(6){background-color: hsl(90,0%,0%);}
+		</style>
+		<!--<style >
+			@font-face {
+				font-family:WebFont;
+				src: url("字体/singlemalta-webfont.woff");
+				font-weight: normal;
+			}
+			h1{
+				font-family: WebFont;
+			}
+		</style>-->
+	</head>
+	<body>
+		<!--<h1>abcdefj</h1>-->
+		<div id="div1">
+			<form>
+				<table>
+					<tr><th colspan="6">色相：H=90 Yellow-Green</th></tr>
+					<tr><th colspan="6">饱和度（->）</th></tr>
+					<tr>
+						<td>亮度</td>
+						<td>100%</td>
+						<td>75%</td>
+						<td>50%</td>
+						<td>25%</td>
+						<td>0%</td>
+					</tr>
+					<tr>
+						<td>100</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>88</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>75</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>63</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>50</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>38</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>25</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>13</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>0</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</body>
+</html>

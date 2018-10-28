@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>渐变</title>
+		<style>
+			/*#div1{
+				
+				width:200px;
+				height:300px;
+				background: linear-gradient(to top right,white 20px,red 20px);
+			}
+			.but1{
+				background: linear-gradient(to top,yellow,green);
+			}
+			.but1:hover{
+				background: linear-gradient(to bottom,yellow,green);
+			}*/
+			#div1{
+				width:500px;
+				height:200px;
+				background-color: #00B3FF ;
+				color:white;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				var div1=document.getElementById("div1");
+				var but1=document.getElementsByClassName("but1")[0];
+				var but2=document.getElementsByClassName("but2")[0];
+				var n;
+				function F(){
+					div1.style.transform="rotate("+n+"deg)";
+					n=n+10;
+					
+				}
+				but1.onclick=function(){
+					
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1" ></div>
+		<button class="but1" >开始</button>
+		<button class="but1">结束</button>
+		
+	</body>
+</html>
