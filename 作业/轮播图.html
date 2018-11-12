@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>轮播图</title>
+		<!--<style>
+			.boxes{
+				width:637px;
+				height:443px;
+				border:1px solid black;
+			}
+			@keyframes a22{
+				0%{top:0px;left:0px;opacity: 100;}
+				15%{top:0px;left:0px;opacity: 100;}
+				20%{top:637px;left:0px;opacity: 0;}
+				35%{top:637px;left:0px;opacity: 0;}
+				40%{top:1274px;left:0px;opacity: 0;}
+				55%{top:1274px;left:0px;opacity: 0;}
+				60%{top:1911px;left:0px;opacity: 0;}
+				75%{top:1911px;left:0px;opacity: 0;}
+				80%{top:1911px;left:0px;opacity: 0;}
+				95%{top:2548px;left:0px;opacity: 0;}
+				100%{top:-637px;left:0px;opacity: 0;}
+			}
+			.22{
+				position: relative;
+				top:0px;
+				left:0px;
+			}
+			#boxes:hover .22{
+				animation-name:a22;
+				animation-duration:;
+			}
+		</style>-->
+		<style>
+			#boxes{
+				overflow:hidden;
+				width:637px;
+				height:443px;
+				border:1px solid black;
+			}
+			@keyframes a22{
+				0%{top:0px;left:0px;opacity: 1;}
+				40%{top:0px;left:0px;opacity: 1;}
+				50%{top:443px;left:0px;opacity: 0;}
+				90%{top:-443px;left:0px;opacity: 0;}
+				100%{top:0px;left:0px;opacity: 1;}
+			}
+			@keyframes a33{
+				0%{top:-886px;left:0px;opacity: 0;}
+				40%{top:-886px;left:0px;opacity: 0;}
+				50%{top:-443px;left:0px;opacity: 1;}
+				90%{top:-443px;left:0px;opacity: 1;}
+				100%{top:0px;left:0px;opacity: 0;}
+			}
+			.box1{
+				position: relative;
+				top:0px;
+				left:0px;
+				opacity: 100;
+			}
+			.box2{
+				position: relative;
+				top:-443px;
+				left:0px;
+				opacity: 0;
+			}
+			#boxes:hover .box1{
+				animation-name: a22;
+				animation-duration: 5s;
+				animation-iteration-count: infinite;
+			}
+			#boxes:hover .box2{
+				animation-name: a33;
+				animation-duration: 5s;
+				animation-iteration-count: infinite;
+			}
+		</style>
+	</head>
+	<body>
+		<!--<div class="boxes">
+			<img class="22" src="images/22.jpg" alt="22">
+			<img class="33" src="images/33.jpg" alt="33">
+			<img class="44" src="images/44.jpg" alt="44">
+			<img class="55" src="images/55.jpg" alt="55">
+			<img class="66" src="images/66.jpg" alt="66">
+		</div>-->
+		<div id="boxes">
+			<img class="box1" src="images/22.jpg">
+			<img class="box2" src="images/33.jpg">
+		</div>
+	</body>
+</html>

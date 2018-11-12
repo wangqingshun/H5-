@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>响应式查询</title>
+		<style>
+			*{
+				margin:0px;
+				padding: 0px;
+			}
+			ul{
+				list-style: none;
+			}
+			a{
+				text-decoration: none;
+			}
+			@media screen and (min-width:1000px ){
+				#header{
+					width:1000px;
+					margin:0px auto;
+					background: #5A6268;
+					text-align: left;
+				}
+				#container{
+					width:1000px;
+					margin:0px auto;
+					background: white;
+				}
+				#container #left{
+					width:240px;
+					height:300px;
+					margin-left: 10px;
+					background: #E0A800;
+					float:left
+				}
+				#container #middle{
+					width:480px;
+					height:300px;
+					margin-left: 10px;
+					background: #FFC0CB;
+					float:left
+				}
+				#container #right{
+					width:240px;
+					height:300px;
+					margin-left: 10px;
+					background: #00B3FF;
+					float:left
+				}
+				#footer{
+					width:1000px;
+					margin:400px auto;
+					background: #5A6268;
+					text-align: center;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="header">
+			<h2>HTML5程序设计基础</h2>
+		</div>
+		<div id="container">
+			<div id="left">
+				<ul>
+					<li>HTML5</li>
+					<li>CSS3</li>
+					<li>Bootstrap</li>
+					<li>Others</li>
+				</ul>
+			</div>
+			<div id="middle">
+				<h2>HTML5</h2>
+				<p>万维网的核心语言，标准通用标记语言下的一个应用超文本语言第五次大量修改</p>
+			</div>
+			<div id="right">
+				<ul>
+					<li>HTML5</li>
+					<li>CSS3</li>
+					<li>Bootstrap</li>
+					<li>Others</li>
+				</ul>
+			</div>
+		</div>
+		<div id="footer">
+			版权所有
+		</div>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#b1{
+				margin: 50px auto;
+				width:307px;
+				height:304px;
+				border:1px solid red;
+				background:url(images/1.jpg);
+			}
+			.b2{
+				width:307px;
+				height:304px;
+				border:2px solid red;
+				background-color: #ECECF6;
+				transform: scale(0,0);
+				text-align: center;
+				line-height: 304px;
+			}
+			#b1:hover .b2{
+				transform: scale(1,1);
+				transition: all 4s ease 0s;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="b1">
+			<div class="b2">漂亮</div>
+		</div>
+	</body>
+</html>
